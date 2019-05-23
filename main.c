@@ -13,6 +13,9 @@ int main(){
         switch(op){
             case 1:
                 i_insere();
+                printf("\n");
+                imprimirArvore(raiz, altura(raiz));
+                printf("\n\n");
                 break;
             case 2: 
                 i_remove();

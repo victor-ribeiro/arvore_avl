@@ -15,11 +15,15 @@ void i_insere(){
     int n;
     printf("Digite o numero a inserir: ");
     scanf("%d", &n);
-    if(insere(n) == -1) printf("Não inserido\n");
+    if(buscar(n)){
+        printf("*** No ja exite ***\n");
+        return;
+    } 
+    if(insere(n) == -1) printf("*** Não inserido ***\n");
     else printf("Inserido\n");
 }
 
-int imprimirArvore( arvore *aux, int nivel){
+int imprimirArvore(arvore *aux, int nivel){
     if(!raiz) printf("arvore vazia\n");
     if(aux){
         imprimirArvore(aux->esquerda, altura(aux->esquerda));

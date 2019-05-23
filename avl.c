@@ -9,7 +9,9 @@ struct Arvore{
 arvore *raiz = NULL;
 
 arvore* criaArvore(){
-    return (arvore*) malloc(sizeof(arvore));
+    arvore *tmp = (arvore*) malloc(sizeof(arvore));
+    if(!tmp) return NULL;
+    return tmp;
 }
 
 int altura( arvore *aux){
